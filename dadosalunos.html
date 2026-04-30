@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Cadastro de Alunos</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+  }
+
+  body {
+    background-color: #f4f5f7;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    color: #1f2937;
+  }
+
+  form {
+    background-color: #ffffff;
+    padding: 35px 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  fieldset {
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+
+  legend {
+    font-weight: 600;
+    color: #2563eb;
+    padding: 0 10px;
+    font-size: 1.1rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 500;
+    color: #374151;
+    font-size: 1rem;
+  }
+
+  input[type="text"], select {
+    width: 100%;
+    padding: 12px 14px;
+    margin-top: 5px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+
+  input[type="text"]:focus, select:focus {
+    border-color: #2563eb;
+    outline: none;
+    background-color: #ffffff;
+  }
+
+  input[type="submit"], input[type="reset"] {
+    padding: 12px 22px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+    color: #fff;
+  }
+
+  input[type="submit"] {
+    background-color: #2563eb;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #1e40af;
+  }
+
+  input[type="reset"] {
+    background-color: #ef4444;
+  }
+
+  input[type="reset"]:hover {
+    background-color: #b91c1c;
+  }
+
+  @media (max-width: 600px) {
+    form {
+      padding: 25px 20px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<form name="form1" action="dadosalunos.php" method="POST">
+
+  <fieldset>
+    <legend>Dados Pessoais</legend>
+    <label for="txtnome">Nome
+      <input type="text" id="txtnome" name="txtnome" placeholder="Digite seu nome">
+    </label>
+    <label for="txttelefone">Telefone
+      <input type="text" id="txttelefone" name="txttelefone" maxlength="14" placeholder="(00) 00000-0000">
+    </label>
+    <label for="txtRG">RG
+      <input type="text" id="txtRG" name="txtRG" maxlength="15" placeholder="Digite seu RG">
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Dados Escolares</legend>
+    <label for="cbocursos">Curso
+      <select id="cbocursos" name="cbocursos">
+        <option value="">Selecione</option>
+        <option value="Informatica">Informática</option>
+        <option value="Administracao">Administração</option>
+        <option value="Enfermagem">Enfermagem</option>
+        <option value="Alimentos">Alimentos</option>
+      </select>
+    </label>
+    <label for="txtmodulo">Módulo
+      <input type="text" id="txtmodulo" name="txtmodulo" placeholder="Digite o módulo">
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Opções</legend>
+    <input type="submit" value="Confirmar">
+    <input type="reset" value="Limpar">
+  </fieldset>
+
+</form>
+
+</body>
+</html>
